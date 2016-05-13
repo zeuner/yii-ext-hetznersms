@@ -2,6 +2,8 @@
 
 /**
  * Class HetznerSMSGate
+ * (c) 2016 Isidor Zeuner
+ * distributed under the MIT license without any warranty
  */
 
 class HetznerSMSGate extends CComponent
