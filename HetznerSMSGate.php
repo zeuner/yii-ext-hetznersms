@@ -283,7 +283,7 @@ class HetznerSMSGate extends CComponent
     public function send($to, $message)
     {
 
-        $components = static::split_to($to);
+        $components = $this->split_to($to);
 
         require_once('sms.php');
 
@@ -312,7 +312,7 @@ class HetznerSMSGate extends CComponent
      * @param $to
      * @return mixed
      */
-    protected static function split_to($to)
+    protected function split_to($to)
     {
         for (
             $length = 2;
@@ -322,7 +322,7 @@ class HetznerSMSGate extends CComponent
             $tried = substr(
                 $to,
                 0,
-                $length
+                $length++
             );
             if (
                 isset(
