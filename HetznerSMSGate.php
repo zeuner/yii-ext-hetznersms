@@ -317,12 +317,12 @@ class HetznerSMSGate extends CComponent
         for (
             $length = 2;
             4 >= $length;
-            $length
+            $length++
         ) {
             $tried = substr(
                 $to,
                 0,
-                $length++
+                $length
             );
             if (
                 isset(
